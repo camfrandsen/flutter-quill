@@ -74,10 +74,7 @@ class _TextLineState extends State<TextLine> {
   void _pressedKeysChanged() {
     final newValue = _pressedKeys!.metaPressed || _pressedKeys!.controlPressed;
     if (_metaOrControlPressed != newValue) {
-      setState(() {
-        _metaOrControlPressed = newValue;
-        _richTextKey = UniqueKey();
-      });
+      _metaOrControlPressed = newValue;
     }
   }
 
